@@ -64,7 +64,9 @@ body {
 }
 
 @keyframes progressAnimation {
-    to { width: 100%; }
+    to {
+        width: 100%;
+    }
 }
 
 .progress-bar.completed .progress-fill {
@@ -172,7 +174,7 @@ body {
     object-fit: contain;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
 }
 
 .story-background::after {
@@ -183,13 +185,11 @@ body {
     width: 100%;
     height: 100%;
     /* Gradiente suavizado para legibilidad de texto */
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.2) 0%,
-        transparent 20%,
-        transparent 60%,
-        rgba(0, 0, 0, 0.8) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            transparent 20%,
+            transparent 60%,
+            rgba(0, 0, 0, 0.8) 100%);
     z-index: 3;
     pointer-events: none;
 }
@@ -220,8 +220,15 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .story-title {
@@ -260,6 +267,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -285,6 +293,7 @@ body {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -564,4 +573,11 @@ body {
     .control-btn:active {
         transform: scale(0.95);
     }
+}
+
+
+/* Posición inferior ajustada para evitar tapar caras */
+.story-content.low-position {
+    align-items: flex-end;
+    padding-bottom: 40px;
 }
