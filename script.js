@@ -8,9 +8,22 @@ let audio = null;
 // ===== Inicialización =====
 function init() {
     createProgressBars();
+    setupImageBackgrounds();
     updateStory();
     setupEventListeners();
     createParticles();
+}
+
+// ===== Configurar fondos de imágenes =====
+function setupImageBackgrounds() {
+    document.querySelectorAll('.story-background img').forEach(img => {
+        const container = img.closest('.story-background');
+        if (container) {
+            // Establecer la variable CSS para el fondo borroso
+            container.style.setProperty('--bg-image', `url("${img.src}")`);
+            container.classList.add('has-image');
+        }
+    });
 }
 
 // ===== Crear barras de progreso =====

@@ -147,12 +147,32 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Fondo borroso para llenar el espacio */
+.story-background.has-image::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    filter: blur(30px) brightness(0.5);
+    z-index: 1;
 }
 
 .story-background img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 
 .story-background::after {
@@ -162,13 +182,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Gradiente suavizado para legibilidad de texto */
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        transparent 30%,
-        transparent 70%,
-        rgba(0, 0, 0, 0.7) 100%
+        rgba(0, 0, 0, 0.2) 0%,
+        transparent 20%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.8) 100%
     );
+    z-index: 3;
+    pointer-events: none;
 }
 
 .story-content {
