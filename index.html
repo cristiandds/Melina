@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Momentos Especiales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Controles superiores -->
+    <div class="top-controls">
+        <div class="progress-bars" id="progressBars"></div>
+        <div class="control-buttons">
+            <button class="control-btn" id="musicBtn" aria-label="Música">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13M9 18c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3zm12-2c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>
+                </svg>
+            </button>
+            <button class="control-btn" id="fullscreenBtn" aria-label="Pantalla completa">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenedor principal de historias -->
+    <div class="stories-container" id="storiesContainer">
+        
+        <!-- Historia 1 - Portada -->
+        <div class="story active" data-index="0">
+            <div class="story-background" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+            <div class="story-content">
+                <div class="story-header fade-in">
+                    <div class="story-icon">💕</div>
+                    <h1 class="story-title">Nuestros<br>Recuerdos</h1>
+                    <p class="story-subtitle">Un viaje a través de momentos inolvidables</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 2 -->
+        <div class="story" data-index="1">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">✨</span>
+                    <h2 class="story-heading">Primer Encuentro</h2>
+                    <p class="story-description">El día que todo comenzó</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 3 -->
+        <div class="story" data-index="2">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">😊</span>
+                    <h2 class="story-heading">Alegría Pura</h2>
+                    <p class="story-description">Risas que nunca olvidaré</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 4 -->
+        <div class="story" data-index="3">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">🌅</span>
+                    <h2 class="story-heading">Atardeceres</h2>
+                    <p class="story-description">Paz y tranquilidad contigo</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 5 -->
+        <div class="story" data-index="4">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">🗺️</span>
+                    <h2 class="story-heading">Aventuras</h2>
+                    <p class="story-description">Explorando el mundo juntos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 6 -->
+        <div class="story" data-index="5">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">💫</span>
+                    <h2 class="story-heading">Pequeños Momentos</h2>
+                    <p class="story-description">Cada detalle cuenta</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 7 -->
+        <div class="story" data-index="6">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">💝</span>
+                    <h2 class="story-heading">Felicidad</h2>
+                    <p class="story-description">Contigo todo es mejor</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia 8 -->
+        <div class="story" data-index="7">
+            <div class="story-background">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80" alt="Momento especial">
+            </div>
+            <div class="story-content">
+                <div class="story-text-box">
+                    <span class="story-emoji">🌟</span>
+                    <h2 class="story-heading">Magia</h2>
+                    <p class="story-description">En cada instante juntos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historia Final -->
+        <div class="story" data-index="8">
+            <div class="story-background" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+            <div class="story-content">
+                <div class="story-header fade-in">
+                    <div class="story-icon">❤️</div>
+                    <h1 class="story-title">Gracias por<br>Cada Momento</h1>
+                    <p class="story-subtitle">Cada recuerdo contigo es un tesoro que guardo en mi corazón</p>
+                    <div class="story-signature">Con amor, siempre</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navegación -->
+    <div class="navigation-arrows">
+        <button class="nav-arrow prev" id="prevBtn" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="nav-arrow next" id="nextBtn" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Indicador de página -->
+    <div class="page-indicator">
+        <span id="currentPage">1</span> / <span id="totalPages">9</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
