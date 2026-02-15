@@ -596,7 +596,7 @@ body {
 /* Posición inferior ajustada para evitar tapar caras */
 .story-content.low-position {
     align-items: flex-end;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
 }
 
 /* Centrar contenido solo para la página final */
