@@ -66,9 +66,9 @@ function updateStory() {
         }
     });
 
-    // Actualizar indicador de página
-    document.getElementById('currentPage').textContent = currentStory + 1;
-    document.getElementById('totalPages').textContent = totalStories;
+    // Actualizar indicador de página (comentado porque se eliminó del HTML)
+    // document.getElementById('currentPage').textContent = currentStory + 1;
+    // document.getElementById('totalPages').textContent = totalStories;
 
     // Actualizar botones
     document.getElementById('prevBtn').disabled = currentStory === 0;
